@@ -1,0 +1,135 @@
+\documentclass[14pt]{extreport}
+
+\usepackage[english]{babel}
+\usepackage[utf8x]{inputenc}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage[makeroom]{cancel}
+\usepackage{tabularx}
+\usepackage{xcolor}
+\usepackage{relsize}
+
+\title{Proof of Function Representation with Taylor Series}
+\author{Adrian D'Costa}
+
+\begin{document}
+\maketitle
+
+We know that a power series is:
+\newline
+
+\begin{align*} f(x) =& a_0 + a_1(x-a) + a_2(x-a)^2 + a_3(x-a)^3 + a_4(x-a)^4 \\&+ a_5(x-a)^5 + ... + a_n(x-a)^{n}... \text{[where }\left|x-a\right| < R\text{]}\end{align*}
+\newline
+
+\section{Section (1)}
+Now:
+$f(a) = a_0$
+\newline
+
+$\therefore a_0 = \frac{f^{(0)}(a)}{0!} \text{ where } f^{(0)}(a) = f(a) \text{ and } 0! = 1$
+\newline
+
+\section{Section (2)}
+
+Taking the first derivative of f(x):
+\newline
+
+$f^{(1)}(x) = a_1 + 2a_2(x-a) + 3a_3(x-a)^2 + 4a_4(x-a)^3 + 5a_5(x-a)^4 + ...$
+\newline
+
+$f^{(1)}(a) = a_1.....\text{(i)}$
+
+$a_{1} = \frac{f^{(1)}(a)}{1!}.....\text{[rearranging (i)]}$
+\newline
+\newline
+
+\section{Section (3)}
+
+Same way taking the second derivative of $f(x)$:
+\newline
+
+$f^{(2)}(x) =  2a_2 + 6a_3(x-a) + 12a_4(x-a)^2 + 20a_5(x-a)^3 + ...$
+\newline
+
+$f^{(2)}(a) = 2a_2.....\text{(ii)}$
+\newline
+
+
+$ a_2 = \frac{f^{(2)}(a)}{2!}....\text{[rearranging (ii)]}$
+\newline
+\newline
+
+
+\section{Section (4)}
+
+Taking third derivative:
+\newline
+
+$f^{(3)}(x) =  6a_3 + 24a_4(x-a) + 60a_5(x-a)^2 + ...$
+\newline
+
+$f^{(3)}(a) = 6a_3.....\text{(iii)}$
+\newline
+
+$a_3 = \frac{f^{(3)}(a)}{3!}....\text{[rearranging (iii)]}$
+\newline
+\newline
+
+
+
+\section{Section (5)}
+
+Taking fourth derivative:
+\newline
+
+$f^{(4)}(x) =  24a_4 + 120a_5(x-a) + ...$
+\newline
+
+$f^{(4)}(a) = 24a_4.....\text{(iv)}$
+\newline
+
+$a_4 = \frac{f^{(4)}(a)}{4!}....\text{[rearranging (iv)]}$
+\newline
+\newline
+
+
+\section{Section (6)}
+Taking fifth derivative:
+\newline
+
+$f^{(5)}(x) =  120a_5 + ...$
+\newline
+
+$f^{(5)}(a) = 120a_5.....\text{(iv)}$
+\newline
+
+$a_5 = \frac{f^{(5)}(a)}{5!}....\text{[rearranaging (v)]}$
+\newline
+\newline
+
+
+By plugging in values of $a_{0}, a_{1}, a_{2}, a_{3}, a_{4} \text{ and } a_5$ into $f(x)$ we get:
+
+\begin{align*}f(x) =&\frac{f^{(0)}(a)(x-a)^0}{0!} + \frac{f^{(1)}(a)(x-a)^1}{1!} + \frac{f^{(2)}(a)(x-a)^2}{2!} + \frac{f^{(3)}(a)(x-a)^3}{3!} \\&+ \frac{f^{(4)}(a)(x-a)^4}{4!} + \frac{f^{(5)}(a)(x-a)^5}{5!} + ...\end{align*} 
+\newline
+\newline
+
+So the pattern is:
+
+$f(x) = \mathlarger{\mathlarger{\sum}}\limits_{n = 0}^n\frac{f^{(n)}(a)(x-a)^n}{n!}$
+\newline
+
+
+And that's it. That's the Taylor series. 
+$\text{[Q.E.D]}$
+
+
+
+
+
+
+
+
+
+\end{document}
